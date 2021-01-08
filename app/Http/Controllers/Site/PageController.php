@@ -11,6 +11,7 @@ class PageController extends Controller
 
         $page = Page::where('slug', $slug)->first();
 
+
         if($page) {
             return view('site.page', [
                 'page' => $page

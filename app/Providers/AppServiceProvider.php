@@ -31,10 +31,14 @@ class AppServiceProvider extends ServiceProvider
             '/' => 'Home'
         ];
         $pages = Page::all();
+
+
         foreach($pages as $page) {
             $frontMenu[ $page['slug'] ] = $page['title'];
         }
+
         View::share('front_menu', $frontMenu);
+
 
         // CONFIGURAÇÕES
         $config = [];
